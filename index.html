@@ -9,11 +9,52 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/bootstrap-utilities.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="module" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 <body>
-    <p>This is a test</p>
-    <input type="number" name="test-input" id="test-input">
-    <label for="test-input">Input a number here or something</label>
-    <button>Click here</button>
+
+<div class="container centered-parent">
+    <div class="card z-depth-5 main-box">
+        <div class="container">
+            <h3>Gay Age Calculator</h3>
+
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab col s3 waves-effect waves-rainbow"><a href="#DirectCalculator">Use normal number</a></li>
+                <li class="tab col s3 waves-effect waves-rainbow"><a href="#BirthdayCalculator">Use Birthday</a></li>
+            </ul>
+            <div id="DirectCalculator" class="col">
+                <div class="vstack">
+                    <p>Scale</p>
+
+                    <p class="waves-effect waves-rainbow rounded-2 radio-box-vert-padding">
+                        <label for="NormalScale">
+                            <input type="radio" id="NormalScale" name="AgeScales" value="0" checked>
+                            <span>Normal Scale</span>
+                        </label>
+                    </p>
+                    <p class="waves-effect waves-rainbow rounded-2 radio-box-vert-padding">
+                        <label for="CFWMScale">
+                            <input type="radio" id="CFWMScale" name="AgeScales" value="1">
+                            <span>Come Fly With Me Scale</span>
+                        </label>
+                    </p>
+
+                </div>
+                <input type="number" name="test-input" id="test-input" value="18">
+                <label for="test-input">Input a number here or something</label>
+                <button class="waves-effect waves-rainbow btn-flat" id="testButton">Click here</button>
+                <div class="vstack">
+                    <p>Gay age: </p>
+                    <p id="gayAgeOutput"></p>
+                </div>
+            </div>
+            <div id="BirthdayCalculator" class="col red">Test 2</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

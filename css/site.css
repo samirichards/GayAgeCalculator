@@ -1,0 +1,101 @@
+html, body {
+    background: radial-gradient(#323232, #171717);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.centered-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* make the parent element fill the viewport */
+}
+
+@media (max-width:1024px){
+    .centered-parent {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        height: 100vh; /* make the parent element fill the viewport */
+    }
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.rounded-1 {
+    border-radius: 8px;
+}
+
+.rounded-2 {
+    border-radius: 16px;
+}
+
+.radio-box-vert-padding{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.radio-box-vert-padding, label{
+    width: 100%;
+}
+
+.main-box{
+    min-width: 60%;
+    max-width: 500px;
+    width: auto;
+    min-height: 500px;
+    height: auto;
+}
+
+@media (max-width:1200px){
+    .main-box{
+        width: 90%;
+        max-width: 95%;
+    }
+}
+
+.accent-color-background{
+    background-color:#eb380c ;
+}
+
+.accent-color-foreground{
+    color:#eb380c ;
+}
+
+.waves-effect.waves-rainbow .waves-ripple {
+    background-color: transparent;
+}
+
+.waves-effect.waves-rainbow .waves-ripple:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, hotpink 12.5%, red 25%, orange 37.5%, yellow 50%, green 62.5%, darkturquoise 75%, blue 87.5%, indigo);
+    opacity: 0.15;
+    animation: rainbow-wave-animation 1s cubic-bezier(0.6, 0.0, 0.2, 1);
+}
+
+@keyframes rainbow-wave-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0.15;
+    }
+    90% {
+        transform: scale(0.9);
+        opacity: 0.875;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
